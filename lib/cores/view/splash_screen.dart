@@ -1,6 +1,4 @@
-
 part of '../cores.dart';
-
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -8,19 +6,18 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
   start() async {
-    var _durasi = Duration(seconds:3);
+    var _durasi = Duration(seconds: 3);
     return new Timer(_durasi, pageNavigasi);
   }
 
   ///ANCHOR: GANTI PAGE NAVIGASI
-  void pageNavigasi(){
+  void pageNavigasi() {
     Navigator.of(context).pushReplacementNamed('/login');
   }
 
   @override
-  void initState(){
+  void initState() {
     super.initState();
     start();
   }
@@ -28,8 +25,13 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF26049D),
-        body: Center(child: Image.asset('assets/udacoding_2.png')),
+      backgroundColor: colorMain,
+      body: Center(
+        child: SizedBox(
+          width: MediaQuery.of(context).size.width * 0.7,
+          child: Image.asset('assets/udacoding_2.png'),
+        ),
+      ),
     );
   }
 }

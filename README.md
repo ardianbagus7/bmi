@@ -1,6 +1,8 @@
 # udacoding_bootcamp
 
-A new Flutter project.
+UDACODING BOOTCAMP
+
+1. Submission Week 1 (Branch week-1)
 
 ## Getting Started
 
