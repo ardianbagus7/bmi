@@ -1,9 +1,7 @@
-import 'package:flushbar/flushbar.dart';
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:udacoding_bootcamp/cores/cores.dart';
 
-
-part 'main_splash.dart';
-part 'signin.dart';
-part 'signup.dart';
-part 'home_page.dart';
+part 'bmi_calculator/animation_number.dart';
+part 'bmi_calculator/home_bmi.dart';

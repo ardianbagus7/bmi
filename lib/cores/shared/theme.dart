@@ -10,3 +10,7 @@ EdgeInsets headerPadding = EdgeInsets.symmetric(horizontal: 16,vertical: 10);
 
 TextStyle blackTextFont = GoogleFonts.poppins().copyWith(color: Colors.black, fontWeight: FontWeight.w500);
 TextStyle whiteTextFont = GoogleFonts.poppins().copyWith(color: Colors.white, fontWeight: FontWeight.w500);
+
+
+TextStyle blackNumberFont = GoogleFonts.sansita().copyWith(color: Colors.black, fontWeight: FontWeight.w500);
+TextStyle whiteNumberFont = GoogleFonts.sansita().copyWith(color: Colors.white, fontWeight: FontWeight.w500);

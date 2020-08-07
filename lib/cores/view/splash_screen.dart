@@ -13,7 +13,10 @@ class _SplashScreenState extends State<SplashScreen> {
 
   ///ANCHOR: GANTI PAGE NAVIGASI
   void pageNavigasi() {
-    Navigator.of(context).pushReplacementNamed('/login');
+    //WEEK 1 LOGIN
+    // Navigator.of(context).pushReplacementNamed('/login');
+    //WEEK 2 BMI
+    Navigator.of(context).pushReplacementNamed('/bmi');
   }
 
   @override

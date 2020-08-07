@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'cores/cores.dart';
+// import 'week1/week1.dart';
 import 'week2/week2.dart';
 
 
@@ -8,7 +9,8 @@ void main() {
     MaterialApp(
       home: SplashScreen(),
       routes: <String, WidgetBuilder>{
-        '/login': (BuildContext context) => Login(),
+        // '/login': (BuildContext context) => Login(),
+        '/bmi' : (BuildContext context) => HomeBMI(),
       },
     ),
   );
