@@ -101,7 +101,7 @@ class _KalkulatorState extends State<Kalkulator> {
               break;
             default:
           }
-
+          buffer.write(total);
           operator = "";
           hitung = false;
         } else {
