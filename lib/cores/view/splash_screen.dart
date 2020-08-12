@@ -16,7 +16,8 @@ class _SplashScreenState extends State<SplashScreen> {
     //WEEK 1 LOGIN
     // Navigator.of(context).pushReplacementNamed('/login');
     //WEEK 2 BMI
-    Navigator.of(context).pushReplacementNamed('/bmi');
+    // Navigator.of(context).pushReplacementNamed('/bmi');
+    Navigator.of(context).pushReplacementNamed('/pilih');
   }
 
   @override

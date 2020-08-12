@@ -9,3 +9,4 @@ part 'utils/animation.dart';
 part 'view/splash_screen.dart';
 part 'shared/theme.dart';
 part 'utils/clip_path.dart';
+part 'view/pilih_page.dart';
