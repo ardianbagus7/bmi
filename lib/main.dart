@@ -2,16 +2,20 @@ import 'package:flutter/material.dart';
 import 'cores/cores.dart';
 // import 'week1/week1.dart';
 import 'week2/week2.dart';
+import 'week3/week3.dart';
 
 void main() {
   runApp(
     MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: SplashScreen(),
       routes: <String, WidgetBuilder>{
         '/pilih': (BuildContext context) => PilihPage(),
         '/login': (BuildContext context) => Login(),
         '/kalkulator': (BuildContext context) => Kalkulator(),
         '/bmi': (BuildContext context) => HomeBMI(),
+        '/loginweek3' : (BuildContext context) => LoginSql(),
+        '/kamus' : (BuildContext context) => KamusPage(),
       },
     ),
   );

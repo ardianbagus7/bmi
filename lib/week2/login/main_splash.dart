@@ -17,6 +17,8 @@ class _LoginState extends State<Login> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   TextEditingController nameController = TextEditingController();
+  TextEditingController nomorController = TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {
@@ -61,6 +63,7 @@ class _LoginState extends State<Login> {
                       emailController: emailController,
                       passwordController: passwordController,
                       nameController: nameController,
+                      nomorController: nomorController,
                     )
                   : SignIn(
                       signIn: signIn,

@@ -6,6 +6,7 @@ class SignUp extends StatelessWidget {
     @required this.emailController,
     @required this.passwordController,
     @required this.nameController,
+    @required this.nomorController,
     @required this.signIn,
     @required this.signUp,
   }) : super(key: key);
@@ -15,6 +16,7 @@ class SignUp extends StatelessWidget {
   final TextEditingController emailController;
   final TextEditingController passwordController;
   final TextEditingController nameController;
+  final TextEditingController nomorController;
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +55,7 @@ class SignUp extends StatelessWidget {
             ),
           ),
           Expanded(child: SizedBox(height: 10)),
-          FadeInRight(
+          FadeInLeft(
             1,
             TextField(
               keyboardType: TextInputType.text,
@@ -64,6 +66,26 @@ class SignUp extends StatelessWidget {
                     fontWeight: FontWeight.w400,
                     color: Colors.grey.withOpacity(0.7)),
                 prefixIcon: Icon(Icons.account_circle, color: colorMain),
+                filled: true,
+                fillColor: colorBg,
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                    borderSide: BorderSide.none),
+              ),
+            ),
+          ),
+          SizedBox(height: 20),
+          FadeInRight(
+            1,
+            TextField(
+              keyboardType: TextInputType.number,
+              controller: nomorController,
+              decoration: InputDecoration(
+                hintText: 'Nomor HP',
+                hintStyle: blackTextFont.copyWith(
+                    fontWeight: FontWeight.w400,
+                    color: Colors.grey.withOpacity(0.7)),
+                prefixIcon: Icon(Icons.phone, color: colorMain),
                 filled: true,
                 fillColor: colorBg,
                 border: OutlineInputBorder(
@@ -136,42 +158,20 @@ class SignUp extends StatelessWidget {
               },
             ),
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 10),
           FadeInUp(
             1.25,
-            Row(
-              children: <Widget>[
-                Expanded(
-                    child: Divider(
-                        thickness: 2, color: Colors.grey.withOpacity(0.4))),
-                Text('  or  ',
-                    style: blackTextFont.copyWith(
-                        fontSize: 14, color: Colors.grey.withOpacity(0.7))),
-                Expanded(
-                    child: Divider(
-                        thickness: 2, color: Colors.grey.withOpacity(0.4)))
-              ],
-            ),
-          ),
-          SizedBox(height: 20),
-          FadeInUp(
-            1.5,
-            InkWell(
-              child: Container(
-                height: 50,
-                width: double.infinity,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.white,
-                    border: Border.all(width: 1, color: colorMain)),
-                child: Text(
-                  'Sign in',
-                  style: whiteTextFont.copyWith(
-                      color: colorMain,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500),
-                ),
+            GestureDetector(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text("Already have account? ",
+                      style: blackTextFont.copyWith(
+                          fontSize: 14, color: Colors.grey.withOpacity(0.7))),
+                  Text('Signin now',
+                      style: blackTextFont.copyWith(
+                          fontSize: 14, color: colorMain)),
+                ],
               ),
               onTap: () {
                 signIn();

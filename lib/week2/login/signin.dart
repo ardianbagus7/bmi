@@ -57,11 +57,11 @@ class SignIn extends StatelessWidget {
               keyboardType: TextInputType.text,
               controller: emailController,
               decoration: InputDecoration(
-                hintText: 'Username',
+                hintText: 'Email',
                 hintStyle: blackTextFont.copyWith(
                     fontWeight: FontWeight.w400,
                     color: Colors.grey.withOpacity(0.7)),
-                prefixIcon: Icon(Icons.account_circle, color: colorMain),
+                prefixIcon: Icon(Icons.email, color: colorMain),
                 filled: true,
                 fillColor: colorBg,
                 border: OutlineInputBorder(
@@ -129,49 +129,27 @@ class SignIn extends StatelessWidget {
               },
             ),
           ),
-          SizedBox(height: 50),
-          // FadeInUp(
-          //   1.25,
-          //   Row(
-          //     children: <Widget>[
-          //       Expanded(
-          //           child: Divider(
-          //               thickness: 2, color: Colors.grey.withOpacity(0.4))),
-          //       Text('  or  ',
-          //           style: blackTextFont.copyWith(
-          //               fontSize: 14, color: Colors.grey.withOpacity(0.7))),
-          //       Expanded(
-          //           child: Divider(
-          //               thickness: 2, color: Colors.grey.withOpacity(0.4)))
-          //     ],
-          //   ),
-          // ),
-          // SizedBox(height: 20),
-          // FadeInUp(
-          //   1.5,
-          //   InkWell(
-          //     child: Container(
-          //       height: 50,
-          //       width: double.infinity,
-          //       alignment: Alignment.center,
-          //       decoration: BoxDecoration(
-          //           borderRadius: BorderRadius.circular(10),
-          //           color: Colors.white,
-          //           border: Border.all(width: 1, color: colorMain)),
-          //       child: Text(
-          //         'Sign up',
-          //         style: whiteTextFont.copyWith(
-          //             color: colorMain,
-          //             fontSize: 16,
-          //             fontWeight: FontWeight.w500),
-          //       ),
-          //     ),
-          //     onTap: () {
-          //       signUp();
-          //     },
-          //   ),
-          // ),
-          // SizedBox(height: 20),
+          SizedBox(height: 10),
+          FadeInUp(
+            1.25,
+            GestureDetector(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text("Don't have account? ",
+                      style: blackTextFont.copyWith(
+                          fontSize: 14, color: Colors.grey.withOpacity(0.7))),
+                  Text('Signup now',
+                      style: blackTextFont.copyWith(
+                          fontSize: 14, color: colorMain)),
+                ],
+              ),
+              onTap: () {
+                signUp();
+              },
+            ),
+          ),
+          SizedBox(height: 20),
         ],
       ),
     );
