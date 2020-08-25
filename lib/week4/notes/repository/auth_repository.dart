@@ -78,7 +78,8 @@ class AuthRepository4 {
         final _msg = json.decode(response.body);
         return AuthUser4Result(msg: _msg['message']);
       } else {
-        return AuthUser4Result(msg: "Server sedang bermasalah");
+        final _msg = json.decode(response.body);
+        return AuthUser4Result(msg:  _msg['message'].toString().split("'")[0].split("1062")[1].trim());
       }
     } catch (e) {
       print(e);

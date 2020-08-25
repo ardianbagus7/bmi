@@ -71,8 +71,7 @@ class AuthProvider4 extends ChangeNotifier {
 
   Future<AuthUser4Result> signup(
       String email, String password, String name) async {
-    status = Status.Authenticating;
-    notifyListeners();
+
 
     AuthUser4Result result = await authRepository4.signup(
       email,
@@ -81,7 +80,7 @@ class AuthProvider4 extends ChangeNotifier {
       ''
     );
 
-    if (result != null) {
+    if (result.data != null) {
       // change data
       user = result.data;
       status = Status.Authenticated;

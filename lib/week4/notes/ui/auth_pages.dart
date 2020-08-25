@@ -155,8 +155,7 @@ class _LoginState extends State<AuthPage4> {
           nameController.text,
         );
 
-        if (result.data != null) {
-        } else {
+        if (result.data == null) {
           setState(() {
             isLoading = false;
           });
