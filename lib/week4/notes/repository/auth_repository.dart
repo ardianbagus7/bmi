@@ -18,7 +18,7 @@ class AuthRepository4 {
         headers: headers,
       );
       print(response.body);
-      if (response.statusCode == 200) {
+      if (response.statusCode == 200 || response.statusCode == 201) {
         final result = json.decode(response.body);
 
         UserWeek4 data = UserWeek4(
@@ -63,7 +63,7 @@ class AuthRepository4 {
         headers: headers,
       );
       print(response.body);
-      if (response.statusCode == 201) {
+      if (response.statusCode == 200 || response.statusCode == 201) {
         final result = json.decode(response.body);
 
         UserWeek4 data = UserWeek4(
@@ -79,7 +79,12 @@ class AuthRepository4 {
         return AuthUser4Result(msg: _msg['message']);
       } else {
         final _msg = json.decode(response.body);
-        return AuthUser4Result(msg:  _msg['message'].toString().split("'")[0].split("1062")[1].trim());
+        return AuthUser4Result(
+            msg: _msg['message']
+                .toString()
+                .split("'")[0]
+                .split("1062")[1]
+                .trim());
       }
     } catch (e) {
       print(e);

@@ -48,7 +48,7 @@ class AuthProvider4 extends ChangeNotifier {
 
 
     AuthUser4Result result = await authRepository4.signin(email, password);
-
+    
     if (result.data != null) {
       // change data
       user = result.data;

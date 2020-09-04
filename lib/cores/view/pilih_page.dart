@@ -217,10 +217,23 @@ class Week4 extends StatelessWidget {
             CustomTapButton(
               text: 'Note',
               function: () {
-                Navigator.pushNamed(context, '/week4');
+                Navigator.pushNamed(context, '/note');
               },
             ),
             SizedBox(height: 10),
+            CustomTapButton(
+              text: 'Marketplace',
+              function: () {
+                Navigator.pushNamed(context, '/marketplace');
+              },
+            ),
+            SizedBox(height: 10),
+            CustomTapButton(
+              text: 'Gallery',
+              function: () {
+                Navigator.pushNamed(context, '/gallery');
+              },
+            ),
           ],
         ),
       ),
