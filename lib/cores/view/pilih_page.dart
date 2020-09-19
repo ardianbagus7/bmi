@@ -18,6 +18,8 @@ class _PilihPageState extends State<PilihPage> {
               return Week3();
             case 2:
               return Week4();
+            case 3:
+              return Week5();
             default:
               return Week2();
           }
@@ -87,7 +89,7 @@ class _PilihPageState extends State<PilihPage> {
                           ),
                         );
                       },
-                      childCount: 3,
+                      childCount: 4,
                     ),
                   ),
                 ],
@@ -234,6 +236,42 @@ class Week4 extends StatelessWidget {
                 Navigator.pushNamed(context, '/gallery');
               },
             ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class Week5 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: colorBg,
+      body: Padding(
+        padding: mainPadding,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            FadeInLeft(
+              0.5,
+              Text(
+                'WEEK 5 SUBMISSION',
+                style: blackTextFont.copyWith(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: colorMain,
+                ),
+              ),
+            ),
+            SizedBox(height: 20),
+            CustomTapButton(
+              text: 'Movie',
+              function: () {
+                Navigator.pushNamed(context, '/movie');
+              },
+            ),
+            SizedBox(height: 10),
           ],
         ),
       ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:udacoding_bootcamp/week4/week4.dart';
+import 'package:udacoding_bootcamp/week5/week5.dart';
 import 'cores/cores.dart';
 // import 'week1/week1.dart';
 import 'week2/week2.dart';
@@ -14,6 +15,7 @@ void main() {
         ChangeNotifierProvider(create: (context) => AuthProvider4()),
         ChangeNotifierProvider(create: (context) => NoteProvider()),
         ChangeNotifierProvider(create: (context) => MarketplaceProvider()),
+        ChangeNotifierProvider(create: (context) => MovieProvider()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -27,7 +29,8 @@ void main() {
           '/kamus': (BuildContext context) => KamusPage(),
           '/note': (BuildContext context) => MainPage4(),
           '/marketplace': (BuildContext context) => MainPageMarketplace(),
-          '/gallery' : (BuildContext context) => GalleryHomePage(),
+          '/gallery': (BuildContext context) => GalleryHomePage(), 
+          '/movie': (BuildContext context) => MainMoviePage(),
         },
       ),
     ),

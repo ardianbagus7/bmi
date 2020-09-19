@@ -2,8 +2,11 @@ part of '../../week4.dart';
 
 class StarWidget extends StatelessWidget {
   final int star;
+  final MainAxisAlignment mainAxis;
 
-  const StarWidget({Key key, this.star}) : super(key: key);
+  const StarWidget(
+      {Key key, this.star, this.mainAxis = MainAxisAlignment.start})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,11 +15,12 @@ class StarWidget extends StatelessWidget {
       (index) => Icon(
         index < star ? Icons.star : Icons.star_outline,
         color: Colors.yellow,
-        size:20,
+        size: 20,
       ),
     );
     return Row(
-      children:widgets,
+      mainAxisAlignment: mainAxis,
+      children: widgets,
     );
   }
 }
