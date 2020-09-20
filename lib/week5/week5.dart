@@ -16,6 +16,9 @@ part 'movie/provider/movie_provider.dart';
 part 'movie/ui/home_movie_page.dart';
 part 'movie/ui/detail_movie_page.dart';
 part 'movie/ui/favorite_movie_page.dart';
+part 'youtube/ui/youtube_home_page.dart';
+part 'youtube/ui/detail_youtube_page.dart';
+part 'youtube/model/youtube_model.dart';
 
 class MainMoviePage extends StatelessWidget {
   @override

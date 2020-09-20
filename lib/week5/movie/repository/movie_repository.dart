@@ -147,4 +147,41 @@ class MovieRepository {
       return MovieResult(msg: "Internet tidak dapat terhubung keserver");
     }
   }
+
+  ///
+  /// Get Youtube
+  ///
+  Future<YoutubeResult> getYoutube() async {
+    final url = "https://flutterrlist.herokuapp.com/";
+
+    Map<String, String> headers = {
+      'Accept': 'application/json',
+    };
+
+    try {
+      print(url);
+      final response = await http.get(
+        url,
+        headers: headers,
+      );
+      if (response.statusCode == 200) {
+        final result = json.decode(response.body);
+        final data = result as List;
+
+        List<Youtube> youtube = data.map((e) => Youtube.fromJson(e)).toList();
+
+        return YoutubeResult(data: youtube);
+      } else if (response.statusCode == 422) {
+        final _msg = json.decode(response.body);
+        return YoutubeResult(msg: _msg['message']);
+      } else if (response.statusCode == 401) {
+        return YoutubeResult(msg: "Sesi Token Habis");
+      } else {
+        return YoutubeResult(msg: "Server sedang bermasalah");
+      }
+    } catch (e) {
+      print(e);
+      return YoutubeResult(msg: "Internet tidak dapat terhubung keserver");
+    }
+  }
 }

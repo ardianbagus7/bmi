@@ -272,6 +272,13 @@ class Week5 extends StatelessWidget {
               },
             ),
             SizedBox(height: 10),
+            CustomTapButton(
+              text: 'Youtube',
+              function: () {
+                Navigator.pushNamed(context, '/youtube');
+              },
+            ),
+            SizedBox(height: 10),
           ],
         ),
       ),

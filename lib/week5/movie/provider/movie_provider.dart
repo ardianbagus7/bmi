@@ -91,5 +91,29 @@ class MovieProvider extends ChangeNotifier {
     }
   }
 
+  
+  /// 
+  /// NOTE: get all notes Method
   ///
+  List<Youtube> youtube;
+  Future<YoutubeResult> getYoutube() async {
+    try {
+      YoutubeResult result = await movieRepository.getYoutube();
+
+      if (result != null) {
+        // change data
+        youtube = result.data;
+      }
+      print('${result?.msg}');
+      if (result?.msg == "Sesi Token Habis") {
+        await authProvider4.logOut(true);
+      }
+      notifyListeners();
+      return result;
+    } catch (e) {
+      print(e);
+      return YoutubeResult(msg: 'Internet tidak dapat terhubung');
+    }
+  }
+
 }

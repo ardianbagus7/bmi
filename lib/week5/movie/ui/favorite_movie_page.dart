@@ -122,7 +122,7 @@ class _MovieFavoritePageState extends State<MovieFavoritePage> {
                                           SizedBox(width: 5),
                                           StarWidget(
                                             star: provider
-                                                .favoriteMovie[index].favorite,
+                                                .favoriteMovie[index].rating,
                                           ),
                                           SizedBox(width: 5),
                                           Text(
